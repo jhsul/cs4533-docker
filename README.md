@@ -33,7 +33,7 @@ docker run -it -v ~/cs4533/1-calculator-starter:/home/shared jackhsullivan/cs453
 Now, in the docker container
 
 ```sh
-cp ~/libantlr4.a ~/shared/antlr/lib/
+cp ~/libantlr4-runtime.a ~/shared/antlr/lib/
 cd ~/shared
 
 cmake -S . -B build
