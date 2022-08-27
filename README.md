@@ -1,0 +1,41 @@
+## About
+This is a docker image that might be useful if you're in CS 4533. Right now, it just gives you a ready-to-use antlr shared library, as well as cmake, llvm, and other basic tools. However, it could be extended to incorporate more parts of the toolchain as the course progresses. 
+
+## Usage
+
+This takes a long time but you only need to do it once:
+
+`docker build github.com/jhsul/cs4533-docker --name cs4533-docker`
+
+Run with:
+
+`docker run -it -v ~/<your_class_folder>:/home/shared cs4533-docker` 
+
+## Calculator Example
+
+On your *host* machine, clone the course repository 
+
+`git clone https://bitbucket.org/gfp-public-course-materials/compiler-projects-all/src/master/ ~/cs4533`
+
+
+Run the docker image with the shared folder
+
+`docker run -it -v ~/cs4533/1-calculator-starter:/home/shared cs4533-docker`
+
+Now, in the docker container
+
+```sh
+cp ~/libantlr4.a ~/shared/antlr/lib/
+cd ~/shared
+
+cmake -S . -B build
+cmake --build build
+cmake --install build
+install/calculator
+```
+
+You should get:
+```
+OUTPUT
+(<EOF><EOF> <EOF> <EOF>)
+```
