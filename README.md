@@ -27,7 +27,7 @@ git clone https://bitbucket.org/gfp-public-course-materials/compiler-projects-al
 Run the docker image with the shared folder
 
 ```sh
-docker run -it -v ~/cs4533/1-calculator-starter:/home/shared cs4533-docker
+docker run -it -v ~/cs4533/1-calculator-starter:/home/shared jackhsullivan/cs4533-docker
 ```
 
 Now, in the docker container
