@@ -6,7 +6,7 @@ This is a docker image that might be useful if you're in CS 4533. Right now, it 
 This takes a long time but you only need to do it once:
 
 ```sh
-docker build github.com/jhsul/cs4533-docker --t cs4533-docker
+docker build github.com/jhsul/cs4533-docker -t cs4533-docker
 ```
 
 Run with:
