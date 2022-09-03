@@ -15,7 +15,13 @@ pkg-config \
 uuid-dev \
 make \
 cmake \
-clang  
+clang \
+llvm \
+zlib1g-dev 
+
+# Set container to use clang and clang++ instead of gcc
+ENV CC clang
+ENV CXX clang++
 
 # Bad practice but fixes build issue that requires git
 RUN git config --global http.sslVerify false
