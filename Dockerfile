@@ -18,7 +18,7 @@ cmake \
 clang \
 zlib1g-dev 
 
-RUN apt-get install -y llvm
+RUN apt-get install -y llvm llvm-12
 
 # Set container to use clang and clang++ instead of gcc
 ENV CC clang
